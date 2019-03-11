@@ -3,6 +3,7 @@ python: "3.5"
 script: pytest
 install:
   - pip install coverage
+  - pip install colored
 after_script:
   - coverage run test_rpn.py
   - coverage report -m

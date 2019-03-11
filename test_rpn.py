@@ -18,3 +18,14 @@ class TestBasics(unittest.TestCase):
     def test_expo(self):
         result = rpn.calculate("6 2 ^")
         self.assertEqual(36, result)
+
+def main():
+    test = TestBasics()
+    test.test_add()
+    test.test_subtract()
+    test.test_multiply()
+    test.test_divide()
+    test.test_expo() 
+
+if __name__ == '__main__':
+    unittest.main()

@@ -1,3 +1,7 @@
 language: python
 python: "3.5"
 script: pytest
+
+after_script:
+  - coverage run test_rpn.py
+  - coverage report -m

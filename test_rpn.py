@@ -2,6 +2,9 @@ import unittest
 
 import rpn
 
+def run_error():
+    result = rpn.calculate("1 1 1 +")
+
 class TestBasics(unittest.TestCase):
     def test_add(self):
         result = rpn.calculate("1 1 +")
@@ -18,6 +21,9 @@ class TestBasics(unittest.TestCase):
     def test_expo(self):
         result = rpn.calculate("6 2 ^")
         self.assertEqual(36, result)
+    def test_errors(self):
+        self.assertRaises(TypeError, run_error)
+        
 
 def main():
     test = TestBasics()
@@ -26,6 +32,7 @@ def main():
     test.test_multiply()
     test.test_divide()
     test.test_expo() 
+    test.test_errors()
 
 if __name__ == '__main__':
     unittest.main()

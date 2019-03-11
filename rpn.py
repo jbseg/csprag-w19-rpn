@@ -29,10 +29,13 @@ def calculate(myarg):
         raise TypeError("Too many parameters")
     return stack.pop()
 
+def hello():
+    print("hello")
+
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        print("Result: ", end="")
+        print("Result: ")
         red_color = fg('red')
         green_color = fg('green')
         reset = attr('reset')

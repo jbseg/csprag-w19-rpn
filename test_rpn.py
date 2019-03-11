@@ -25,14 +25,14 @@ class TestBasics(unittest.TestCase):
         self.assertRaises(TypeError, run_error)
         
 
-def main():
-    test = TestBasics()
-    test.test_add()
-    test.test_subtract()
-    test.test_multiply()
-    test.test_divide()
-    test.test_expo() 
-    test.test_errors()
+# def main():
+#     test = TestBasics()
+#     test.test_add()
+#     test.test_subtract()
+#     test.test_multiply()
+#     test.test_divide()
+#     test.test_expo() 
+#     test.test_errors()
 
 if __name__ == '__main__':
     unittest.main()

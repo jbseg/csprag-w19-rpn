@@ -1,9 +1,9 @@
 language: python
 python: "3.5"
-script: pytest
+script: python test_rpn.py
 install:
   - pip install coverage
   - pip install colored
 after_script:
-  - coverage run test_rpn.py
+  - coverage run --omit="/usr/*" test_rpn.py
   - coverage report -m
